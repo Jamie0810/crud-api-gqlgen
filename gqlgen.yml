@@ -1,0 +1,20 @@
+schema:
+  - schema.graphql
+
+exec:
+  filename: graph/generated/generated.go
+  package: generated
+
+model:
+  filename: graph/model/models_gen.go
+
+models:
+  Todo:
+    model: github.com/jamie/gqlgen-crud/models.Todo
+  User:
+    model: github.com/jamie/gqlgen-crud/models.User
+
+resolver:
+  layout: follow-schema
+  dir: graph
+  package: graph
